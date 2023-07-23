@@ -64,9 +64,9 @@
 
   <div class="roboto-mono f3-ns f4 absolute bottom-0 left-0 pa4-ns pa3 w-70 fw1">
     <a class="no-underline hover-block black db mb3" href="#studio">01 Studio</a>
-    <a class="no-underline hover-block black db mb3" href="#projects">02 Projects</a>
-    <a class="no-underline hover-block black db mb3" href="#ethos">03 Ethos</a>
-    <a class="no-underline hover-block black db" href="#contact">04 Contact</a>
+    <!-- <a class="no-underline hover-block black db mb3" href="#projects">02 Projects</a> -->
+    <a class="no-underline hover-block black db mb3" href="#ethos">02 Ethos</a>
+    <a class="no-underline hover-block black db" href="#contact">03 Contact</a>
   </div>
 
 </div>
@@ -155,11 +155,26 @@ FOR EXAMPLE: &nbsp;&nbsp;
 
 		  <div class="fl w-70-ns w-100 ph5-ns ph2 mb4">
 		
-		    <div class="bg-white-90 pa3 br bw3 bb f6 tc" style="border-top: 2px solid black; border-left: 2px solid black;">
+		    <div class="bg-white-90 pa3 br bw3 bb f6" style="border-top: 2px solid black; border-left: 2px solid black;">
 
 <!-- Currently building a (yet-to-be-named) web-based ticketing system and <a class="black" href="https://hyperlocker.hxgf.io/">hyperlocker</a> (a small-scale personal database). It will likely be a while before they're ready for the world, but they are coming.  -->
 
-Follow <a class="black" href="https://twitter.com/hxgf_io" target="_blank">@hxgf_io</a> on twitter :)
+
+Other favorite projects include:<br />
+
+- <a class="black" href="https://uiuxui.tumblr.com" target="_blank">uiuxui</a><br />
+- <a class="black" href="https://ffffonts.tumblr.com" target="_blank">ffffonts</a><br />
+- <a class="black" href="https://smoke.js.org" target="_blank">smoke.js.org</a><br />
+- <a class="black" href="https://darkwave.ltd" target="_blank">darkwave</a><br />
+- <a class="black" href="https://slime.technology" target="_blank">SLIME</a><br />
+- <a class="black" href="https://stereotk.com" target="_blank">STEREO TK</a><br />
+<!-- - <a class="black" href="https://fieldrecordings.hxgf.io" target="_blank">field recordings</a><br />
+- <a class="black" href="https://analog.hxgf.io" target="_blank">analog music</a><br /> -->
+
+<br />
+
+And of course we're always working on new projects. <br /><br />
+Studio updates are sparse, but feel free to <a class="black" href="https://twitter.com/hxgf_io" target="_blank">follow @hxgf_io on twitter</a> for any news.
 
 		    </div>
 		  </div>
@@ -235,6 +250,8 @@ Follow <a class="black" href="https://twitter.com/hxgf_io" target="_blank">@hxgf
 			
 			
 			<script>
+
+
 				let projects = [
 
 // fixit maybe				
@@ -1074,39 +1091,42 @@ list site?
 
 			*/
 			
-				
-				$(function(){
 
-          // projects.map(function (project) {
-					$.each(projects, function(i, project){
-						$('[data-id="project-table"]').append(`
-							<tr>
-								<td style="width: 20%;">
-									<a class="black fw6 no-underline" href="${project.url}" target="_blank">${project.title}</a>
-								</td>
-								<td style="width: 50%;" class="lh-copy">
-									${typeof project.icon === 'undefined' ? `` : `<img class="w1" src="${project.icon}" />`}
-									${project.description}
-								</td>
-								<td style="width: 5%;" class="f7 black-80">
-									${project.year}
-								</td>
-								<td style="width: 5%;" class="f7 black-80">
-									${project.type}
-								</td>
-								<td style="width: 5%;" class="f7 black-80">
-									${project.era}
-								</td>
-								<td style="width: 5%;" class="f7 black-80">
-									${project.status}
-								</td>
-							</tr>
-						`);
-					});
-					$('[data-id="project-table"] tr').on('click', function(){
-						window.open($(this).find('a').attr('href'), '_blank');
-					});
-				});
+      
+// fixit disabling for now
+
+				// $(function(){
+
+        //   // projects.map(function (project) {
+				// 	$.each(projects, function(i, project){
+				// 		$('[data-id="project-table"]').append(`
+				// 			<tr>
+				// 				<td style="width: 20%;">
+				// 					<a class="black fw6 no-underline" href="${project.url}" target="_blank">${project.title}</a>
+				// 				</td>
+				// 				<td style="width: 50%;" class="lh-copy">
+				// 					${typeof project.icon === 'undefined' ? `` : `<img class="w1" src="${project.icon}" />`}
+				// 					${project.description}
+				// 				</td>
+				// 				<td style="width: 5%;" class="f7 black-80">
+				// 					${project.year}
+				// 				</td>
+				// 				<td style="width: 5%;" class="f7 black-80">
+				// 					${project.type}
+				// 				</td>
+				// 				<td style="width: 5%;" class="f7 black-80">
+				// 					${project.era}
+				// 				</td>
+				// 				<td style="width: 5%;" class="f7 black-80">
+				// 					${project.status}
+				// 				</td>
+				// 			</tr>
+				// 		`);
+				// 	});
+				// 	$('[data-id="project-table"] tr').on('click', function(){
+				// 		window.open($(this).find('a').attr('href'), '_blank');
+				// 	});
+				// });
 			</script>
 			
 			
@@ -1125,8 +1145,10 @@ list site?
 				}
 
 			</style>
+      <!-- fixit temp disabling -->
+<!--       
 			<table data-id="project-table" cellpadding="0" cellspacing="0" class="f6 w-100 mb6 project-table bg-white"></table>
-			
+			 -->
 			
 			
 
@@ -1173,7 +1195,7 @@ list site?
   <div class="absolute top-0 left-0 w-50 h-100 db-l dn o-20" style="margin-left: 25px; border-right: 50px solid #111111;"></div>
   <div class="absolute top-0 left-0 w-50 h-100 dn-l db o-05" style="margin-left: 25px; border-right: 50px solid #111111;"></div>
 
-      <div class="bg-near-black near-white pa3 dib f5 mb6 mt2">03 Ethos</div>
+      <div class="bg-near-black near-white pa3 dib f5 mb6 mt2">02 Ethos</div>
 
 
   <div class="relative cf">
@@ -1257,7 +1279,7 @@ list site?
 
       <!-- {{!-- <div class="f1-l f2 mb4 mt0-ns mt4">Contact</div> --}} -->
 
-      <div class="bg-near-black near-white pa3 dib f5 mb5-ns mb6 mt2">04 Contact</div>
+      <div class="bg-near-black near-white pa3 dib f5 mb5-ns mb6 mt2">03 Contact</div>
 
 
       <div class="f5 lh-copy fw1 tl-ns tc">
@@ -1275,7 +1297,7 @@ list site?
 <a class="black mr4-l mr3 ml0-l ml2 f2" href="https://twitter.com/hxgf_io" target="_blank"><i class="fab fa-twitter"></i></a>
 <a class="black mr4-l mr3 ml0-l ml2 f2" href="https://github.com/hxgf" target="_blank"><i class="fab fa-github"></i></a>
     
-    <a class="black f2 no-underline" href="https://www.are.na/jonathan-youngblood" target="_blank" style="font-family: courier;">**</a>
+    <a class="black f2 no-underline" href="https://www.are.na/j-youngblood" target="_blank" style="font-family: courier;">**</a>
 
     <a class="dn black f2 mr0-ns mr2 ml0-l ml2" href="https://dribbble.com/hxgf" target="_blank"><i class="fab fa-dribbble"></i></a>
   </div>
